@@ -73,7 +73,7 @@ export class MyProfile extends Component {
                     <img className="post__image" src={onePost.postPhoto}></img>
                     <p>{onePost.postDescription}</p>
                     <h4 className="post__text"><strong>{user.username}</strong>{user.comment}</h4>
-                    <button onClick={()=>this.deletePost(onePost._id, index)}>delete</button>
+                    <button className="delete" onClick={()=>this.deletePost(onePost._id, index)}>X</button>
                   </div>
                 );
               })

@@ -24,25 +24,24 @@ class Login extends Component {
         <h1>Login</h1>
 
         <form className="form" onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
           <input
             className="inputLoginSignup"
             type='text'
             name='username'
             value={username}
             onChange={this.handleChange}
+            placeholder="Username"
           />
-
-          <label>Password:</label>
           <input
             className="inputLoginSignup"
             type='password'
             name='password'
             value={password}
             onChange={this.handleChange}
+            placeholder="Password"
           />
 
-          <input className="insideButton" type='submit' value='Login' />
+          <input className="input-in" type='submit' value='Login' />
         </form>
       </div>
     );

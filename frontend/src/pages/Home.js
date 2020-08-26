@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import Post from '../components/Post'
+import Post from '../components/Post';
 import axios from 'axios';
 import Avatar from "@material-ui/core/Avatar";
-import LikeButton from '../components/LikeButton'
+import LikeButton from '../components/LikeButton';
+import {Link} from 'react-router-dom';
 
 class Home extends Component {
   state = {posts: []};
@@ -28,9 +29,10 @@ class Home extends Component {
                       <Avatar
                         className="post__avatar"
                         alt={post.user.username}
-                        src="/static/images/avatar/1.jpg"
+                        src={post.user.profilePhoto}
                       />
-                      <h3>{post.user.username}</h3>
+                      <Link class="link-name" to={`/profile/${post.user._id}`}>{post.user.username}</Link>
+                      
                     </div>
        <img className="post__image" src={post.postPhoto}></img>
         <p>{post.postDescription}</p>

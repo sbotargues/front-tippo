@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import service from '../api/service';
 
 class CreatePost extends Component {
   constructor(props) {
@@ -32,6 +33,24 @@ class CreatePost extends Component {
       this.setState({ [name]: value });
     };
   
+    handleFileUpload = e => {
+      console.log("el archivo que se subira es:", e.target.files[0])
+
+      const uploadData = new FormData()
+
+      uploadData.append("postPhoto", e.target.files[0]);
+
+      service.handleUpload(uploadData)
+      .then(response => {
+        console.log('response is: ', response);
+
+        this.setState({postPhoto: response.secure_url})
+      })
+      .catch(err=>{
+        console.log("Error uploading the file: ", err)
+      })
+    }
+
   render() {
     console.log('State: ', this.state);
     return (
@@ -54,7 +73,11 @@ class CreatePost extends Component {
                 onChange={(e) => this.handleChange(e)}
                 placeholder="Photo Link"
               />
-              <input type="submit" value="Submit" />
+              <input class="input-in"
+                    type="file" 
+                    onChange={(e) => this.handleFileUpload(e)} 
+              /> 
+              <input class="input-in" type="submit" value="Submit" />
             </div>
           </form>
         </div>

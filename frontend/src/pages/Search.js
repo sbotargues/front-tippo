@@ -50,11 +50,11 @@ export class Search extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <button>Search</button>
+          <button class="search-button" >Search</button>
         </form>
-        <div>{this.state.user?(
+        <div >{this.state.user?(
           <div>
-          <Link to={`/profile/${this.state.user._id}`}>{this.state.user.username}</Link>
+          <Link className="link-name" to={`/profile/${this.state.user._id}`}>{this.state.user.username}</Link>
           <image src={this.state.user.profilePhoto}> </image>
           </div>
           ):null}</div>
