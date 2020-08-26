@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+}
+
+.app{
+    background-color: #fafafa;
+    height: 100vh;
+}
+
+nav.menu, nav.navbar { 
+    display: flex;
+    background: rgb(243, 243, 243);
+    border-top: 1px solid lightgray; 
+    border-bottom: 1px solid lightgray; 
+    object-fit: contain;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav.navbar{
+    position: fixed;
+    width: 100%;
+    
+  }
+
+  nav.menu {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+  }
+  
+  .icon {
+    width: 35px;
+    padding: 7px;
+  }
+
+  .navbar-user{
+    width: 20px;
+    margin: 10px;
+  }
+  /* Style the links inside the navigation bar */
+  nav.menu a {
+   
+  }
+  
+  /* Change the color of links on hover */
+  nav.menu a:hover {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    border-radius: 50%;
+  }
+  
+  nav.menu .menu-user, navnav.menu nav.menu-user{
+    margin-left: 10px;
+    color: white;
+  }
+
+  .like{
+    border: none;
+    background: none;
+    padding: 0px;
+    width: 20px;
+  }
+
+  button, .insideButton {
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    background-color:#33bdef;
+    border-radius:6px;
+    border:1px solid #057fd0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:3px 12px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #5b6178;
+    margin: 10px;
+  }
+  button, .insideButton:hover {
+    background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+    background-color:#019ad2;
+  }
+  button, .insideButton:active {
+    position:relative;
+    top:1px;
+  }
+
+  .form, .signup, .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+  }
+  .signup, .login{
+    margin-top: 0px;
+  }
+  
+  label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .inputLoginSignup{
+    margin-bottom:10px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid lightgray;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .already{
+    margin-top: 50px;
+  }
+
+  .page{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-edit{
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  #edit-form{
+    margin-top: 100px
+  }
+
+  .posting{
+    padding-top: 70px;
+  }
+
+  .search{
+    padding-top: 100px;
+  }
+
+  .crearpost{
+    padding-top: 100px;
+  }
+  
