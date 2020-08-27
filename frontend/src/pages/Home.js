@@ -36,7 +36,7 @@ class Home extends Component {
                     </div>
        <img className="post__image" src={post.postPhoto}></img>
         <p>{post.postDescription}</p>
-        <LikeButton />
+        {/* <Link><button>like</button></Link> */}
         <h4 className="post__text"><strong>{post.username}</strong>{post.comment}</h4>
         </div>)
       })}

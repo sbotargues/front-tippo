@@ -51,7 +51,7 @@ export class MyProfile extends Component {
         <p>{user.link}</p>
         <p>{user.mail}</p>
         {!this.state.showEditForm ? (
-          <button className="form-edit" onClick={this.toggleEdit}>edit</button>
+          <button className="input-in" onClick={this.toggleEdit}>Edit</button>
         ) : (
           <EditProfile user={user} closeForm={this.toggleEdit} />
         )}
@@ -66,7 +66,7 @@ export class MyProfile extends Component {
                       <Avatar
                         className="post__avatar"
                         alt={user.username}
-                        src="/static/images/avatar/1.jpg"
+                        src={user.profilePhoto}
                       />
                       <h3>{user.username}</h3>
                     </div>

@@ -9,7 +9,9 @@ class Navbar extends Component {
       <nav className='navbar'>
         {isLoggedin ? (
           <>
-            <p className='navbar-user'>username {user.username}</p>
+            
+            <img className="logo" src="./logo.png"/>
+            <p className='navbar-user'>{user.username}</p>
             <Link>
             <button className='navbar-button' onClick={logout}>
               Logout

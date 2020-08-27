@@ -54,11 +54,10 @@ class CreatePost extends Component {
   render() {
     console.log('State: ', this.state);
     return (
-      <div>
-        <h1>Add a Post</h1>
-        <div className="crearpost">
-          <form onSubmit={this.handleFormSubmit}>
-            <div className="">
+      <div className="">
+        
+          <form className= "" onSubmit={this.handleFormSubmit}>
+            <div className="createPost">
               <input
                 type="text"
                 name="postDescription"
@@ -81,7 +80,7 @@ class CreatePost extends Component {
             </div>
           </form>
         </div>
-      </div>
+      
     )
   }
     

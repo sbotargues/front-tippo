@@ -16,6 +16,8 @@ nav.menu, nav.navbar {
     object-fit: contain;
     display: flex;
     justify-content: space-around;
+    z-index: 10;
+    
   }
 
   nav.navbar{
@@ -31,7 +33,15 @@ nav.menu, nav.navbar {
     width: 100%;
     
   }
-  
+  .logo{
+    width: 90px;
+    height: 40px;
+    margin-top:7px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    
+  }
+
   .icon {
     width: 35px;
     padding: 7px;
@@ -39,7 +49,10 @@ nav.menu, nav.navbar {
 
   .navbar-user{
     width: 20px;
-    margin: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 18px;
   }
   /* Style the links inside the navigation bar */
   .link-name {
@@ -61,12 +74,12 @@ nav.menu, nav.navbar {
     color: white;
   }
 
-  .like{
+  /* .like{
     border: none;
     background: none;
     padding: 0px;
     width: 20px;
-  }
+  } */
 
   button, .insideButton {
     box-shadow: 0px 1px 0px 0px #f0f7fa;
@@ -145,8 +158,11 @@ nav.menu, nav.navbar {
     align-items: center;
   }
 
-  .crearpost{
+  .createPost{
     padding-top: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .busquedas{
