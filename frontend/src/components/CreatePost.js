@@ -23,7 +23,8 @@ class CreatePost extends Component {
           { withCredentials: true }
         )
         .then((response) => {
-          this.setState({post: response._id});
+          console.log(response)
+          this.props.history.push("/myprofile");
         })
         .catch(error => console.log(error));
     };
@@ -65,13 +66,7 @@ class CreatePost extends Component {
                 onChange={(e) => this.handleChange(e)}
                 placeholder="Description"
               />
-              <input
-                type="text"
-                name="postPhoto"
-                value={this.state.postPhoto}
-                onChange={(e) => this.handleChange(e)}
-                placeholder="Photo Link"
-              />
+      
               <input class="input-in"
                     type="file" 
                     onChange={(e) => this.handleFileUpload(e)} 
